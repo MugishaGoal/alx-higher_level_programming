@@ -4,20 +4,22 @@
 #include <stdlib.h>
 
 /**
- * struct new_listint_s
+ * struct listint_s - singly linked list
  * @n: integer
- * @next_node: points to the next node
+ * @next: points to the next node
  *
- * Description: Singly linked list
+ * Description: singly linked list node structure
+ * 
  */
-typedef struct new_listint_s
+typedef struct listint_s
 {
-	int n;
-	struct new_listint_s *next_node;
-}new_listint_z
-size_t print_listint(const listint_z *head);
-listint_t *add_node(listint_z **head, const int n);
-void free_listint(listint_z *head);
-int inspect_repetition(listint_z *list;
+    int n;
+    struct listint_s *next;
+} listint_t;
+
+size_t print_listint(const listint_t *h);
+listint_t *add_nodeint(listint_t **head, const int n);
+void free_listint(listint_t *head);
+int check_cycle(listint_t *list);
 
 #endif /* LISTS_H */
