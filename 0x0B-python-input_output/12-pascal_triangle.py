@@ -10,20 +10,12 @@ def pascal_triangle(n):
     if n <= 0:
         return []
 
-    triangle = []
-
-    for i in range(n):
-        row_data = []
-        if i == 0:
-            row_data.append(1)
-        else:
-            prev_row = triangle[i - 1]
-            for j in range(i + 1):
-                if j == 0 or j == i:
-                    row_data.append(1)
-                else:
-                    value = prev_row[j - 1] + prev_row[j]
-                    row_data.append(value)
-        triangle.append(row_data)
-
-    return triangle
+    triangles = [[1]]
+    while len(triangles) != n:
+        tri = triangles[-1]
+        temp = [1]
+        for i in range(len(tri) - 1):
+            temp.append(tri[i] + tri[i + 1])
+        temp.append(1)
+        triangles.append(temp)
+    return triangles
