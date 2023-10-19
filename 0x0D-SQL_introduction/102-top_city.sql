@@ -1,4 +1,4 @@
--- A script that displays the top 3 of cities temperature during July and August ordered by temperature (descending)
+-- A script that displays the top 3 of cities
 SELECT city, AVG(temperature) AS avg_temp
 FROM weather
 WHERE month IN (7, 8)
