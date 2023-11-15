@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const argsCount = process.argv[2];
+const argument = process.argv[2];
 if (!argument) {
     console.log('No argument');
 } else {
