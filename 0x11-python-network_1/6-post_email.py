@@ -6,13 +6,10 @@ import sys
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    email = sys.argv[2]
-
-    """Data to be sent in the POST request"""
-    data = {'email': email}
+    email = {"email": sys.argv[2]}
 
     """Make the POST request to the URL"""
-    response = requests.post(url, data=data)
+    response = requests.post(url, data=email)
 
     """Display the body of the response"""
-    print("Your email is:", response.text)
+    print(response.text)
