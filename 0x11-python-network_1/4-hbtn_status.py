@@ -4,7 +4,7 @@ import requests
 
 if __name__ == "__main__":
     url = "https://alx-intranet.hbtn.io/status"
-    
+
     """Make the request to the URL"""
     response = requests.get(url)
 
